@@ -129,15 +129,7 @@ map.on('mousemove', function(e) {
 
 //add turf: a JavaScript library for adding spatial and statistical analysis
 //          contains tools such as buffer, union, merge, sum, median, and average
-//add new source 
-map.addSource('nearest-hospital', {
-  type: 'geojson',
-  data: {
-    type: 'FeatureCollection',
-    features: [
-    ]
-  }
-});
+  
 // create event handlers for clicking on libraries 
 map.on('click', function(e) {
   // Return any features from the 'libraries' layer whenever the map is clicked
@@ -156,9 +148,7 @@ map.on('click', function(e) {
     // the nearest library
     map.getSource('nearest-hospital').setData({
       type: 'FeatureCollection',
-      features: [
-        nearestHospital
-      ]
+      features: [nearestHospital]
     });
     // Create a new circle layer from the 'nearest-library' data source
     map.addLayer({
