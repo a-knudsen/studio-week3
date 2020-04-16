@@ -107,6 +107,13 @@ map.on('load', function() {
     },
     paint: { }
   });
+    map.addSource('nearest-hospital', {
+    type: 'geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: []
+    }
+   });
 });
 
 //add interactivity- create popups when user hovers over markers
